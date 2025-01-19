@@ -159,12 +159,17 @@ bind(
 )
 
 # OK, now we can bring in tcmalloc itself.
-http_archive(
+# http_archive(
+#     name = "com_google_tcmalloc",
+#     sha256 = "81f285cb337f445276f37c308cb90120f8ba4311d1be9daf3b93dccf4bfdba7d",
+#     strip_prefix = "google-tcmalloc-69c409c",
+#     type = "tgz",
+#     url = "https://github.com/google/tcmalloc/tarball/69c409c344bdf894fc7aab83e2d9e280b009b2f3",
+# )
+
+local_repository(
     name = "com_google_tcmalloc",
-    sha256 = "81f285cb337f445276f37c308cb90120f8ba4311d1be9daf3b93dccf4bfdba7d",
-    strip_prefix = "google-tcmalloc-69c409c",
-    type = "tgz",
-    url = "https://github.com/google/tcmalloc/tarball/69c409c344bdf894fc7aab83e2d9e280b009b2f3",
+    path = "/home/ubuntu/repo/tcmalloc-39",
 )
 
 # ========================================================================================
